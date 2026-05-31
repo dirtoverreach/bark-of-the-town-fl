@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@theme {
+  /* Decorative accent — used for borders, backgrounds, non-text elements */
+  --color-bark-green: #2eafc4;
+  /* AA-compliant teal (5.2:1 on white) — used for all text and interactive elements */
+  --color-bark-green-dark: #0e7490;
+  --color-bark-gold: #c9923a;
+  --color-bark-cream: #f0f9fc;
+  --color-bark-brown: #1a3a42;
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-display: 'Georgia', 'Times New Roman', serif;
+}
+
+/* Keyboard focus ring — visible for all interactive elements */
+:focus-visible {
+  outline: 3px solid #0e7490;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Respect reduced-motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bark-cream);
+  color: var(--color-bark-brown);
+  font-family: var(--font-sans);
+}
